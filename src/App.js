@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ShopItemFunc from './Shop/ShopItemFunc';
+import item from './data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="background-element" />
+      <div className="highlight-window">
+        <div className="highlight-overlay" />
+      </div>
+      <div className="window">
+        <ShopItemFunc item={item} />
+      </div>
     </div>
   );
 }
